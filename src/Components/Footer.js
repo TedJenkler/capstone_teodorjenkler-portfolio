@@ -1,8 +1,9 @@
+import logo from "../icons_assets/Logo.svg"
 
 const Footer = () => {
     return (
     <footer>
-        <img className="logo" src="" alt="footerlogo"></img>
+        <img className="logo" src={logo} alt="footerlogo"></img>
         <ul>
             <li>Home</li>
             <li>About</li>

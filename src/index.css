@@ -5,12 +5,12 @@ body {
 
 h1 {
   font-family: 'Markazi Text';
-  font-size: 64pt;
+  font-size: 40pt;
 }
 
 h2 {
   font-family: 'Markazi Text';
-  font-size: 40pt;
+  font-size: 25pt;
 }
 
 h3 {
@@ -54,7 +54,7 @@ header {
 
 nav {
   display: flex;
-  background-color: rgb(73 94 87);;
+  background-color: rgb(242 242 242);
 }
 
 .logo {
@@ -75,9 +75,61 @@ nav > ul > li {
   list-style: none;
 }
 
+/* Call to action */
+
+.calltoaction {
+  background-color: rgb(73 94 87);
+  height: 100%;
+  width: 100%;
+  margin: 0.5em 0 2em 0;
+}
+
+.calltoaction-textarea {
+  margin: 0;
+  padding: 0;
+}
+
+.calltoaction-title {
+  margin: 0;
+  padding: 0;
+  color: rgb(195 165 16);
+}
+
+.calltoaction-subtitle {
+  margin: 0;
+  padding: 0;
+  color:rgb(255 255 255);
+}
+
+.calltoaction-text {
+  margin: 0;
+  padding: 0;
+  color:rgb(255 255 255);
+}
+
+.calltoaction-btn {
+  margin: 0;
+  padding: 1em 2em 1em 2em;
+  background-color: rgb(195 165 16);
+  color:rgb(255 255 255);
+  border: none;
+  border-radius: 1em;
+}
+
+.calltoaction-imgarea {
+  display: flex;
+  justify-content: center;
+}
+
+.calltoaction-img {
+  height: 12em;
+  width: 10em;
+  position: relative;
+  top: 2em;
+}
+
 main {
   display: flex;
-  height: 500px;
 }
 
 footer {
