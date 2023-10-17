@@ -1,6 +1,9 @@
+import CallToAction from "./CallToAction"
 
 const Homepage = () => {
-    return <></>
+    return (
+        <CallToAction />
+    )
 }
 
 export default Homepage

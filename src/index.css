@@ -135,3 +135,11 @@ main {
 footer {
   display: flex;
 }
+
+/* Booking page */
+
+.form-bookingform {
+  display: grid;
+  max-width: 200px;
+  gap: 20px;
+}
