@@ -1,13 +1,12 @@
 import { useState } from "react"
 
-const BookingForm = () => {
+const BookingForm = (props) => {
 
     const [dateField, setDateField] = useState("");
     const [timeField, setTimeField] = useState("");
     const [number, setNumber] = useState("");
     const [choice, setChoice] = useState("");
-    const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"])
-    const times = availableTimes.map((t) => {
+    const times = props.availableTimes.map((t) => {
         return <option>{t}</option>
     })
     return (

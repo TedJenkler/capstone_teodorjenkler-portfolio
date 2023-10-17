@@ -1,10 +1,10 @@
 import BookingForm from "./BookingForm"
 
 
-const BookingPage = () => {
-    return ( 
+const BookingPage = (props) => {
+    return (
     <>
-        <BookingForm />
+        <BookingForm availableTimes={props.availableTimes} setAvailableTimes={props.setAvailableTimes} />
     </>
     )
 }
