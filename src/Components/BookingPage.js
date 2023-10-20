@@ -4,7 +4,8 @@ import BookingForm from "./BookingForm"
 const BookingPage = (props) => {
     return (
     <>
-        <BookingForm availableTimes={props.availableTimes} setAvailableTimes={props.setAvailableTimes} />
+        <BookingForm state={props.state} dispatch={props.dispatch} // availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} 
+        />
     </>
     )
 }
