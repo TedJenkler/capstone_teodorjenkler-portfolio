@@ -3,23 +3,21 @@ import { useState } from "react"
 const BookingForm = (props) => {
 
     const [dateField, setDateField] = useState("");
-  //  const [timeField, setTimeField] = useState("");
     const [number, setNumber] = useState("");
     const [choice, setChoice] = useState("");
-   // const times = props.availableTimes.map((t) => {
-   //     return <option>{t}</option>
-  //  })
-    const newtimes = Object.values(props.state).map((t) => {
-        return <option>{t}</option>
+    const target = Object.values(props.state.state)
+
+    const newtimes = target.map((t) => {
+         return <option>{t}</option>
     })
-    console.log(newtimes)
+
     return (
     <>
     <form className="form-bookform">
         <label htmlFor="res-date">Choose date</label>
         <input type="date" id="res-date" value={dateField} onChange={(e) => {setDateField(e.target.value)}}></input>
         <label htmlFor="res-time">Choose time</label>
-        <select id="res-time" onChange={(e) => {props.dispatch()}} value={props.state}>
+        <select id="res-time" onClick={() => {props.dispatch({ type: 'update' })}} value={target.value}>
             {newtimes}
         </select>
         <label htmlFor="guests">Number of guests</label>

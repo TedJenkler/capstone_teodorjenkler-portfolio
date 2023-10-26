@@ -10,15 +10,19 @@ import { useReducer, useState } from "react"
 
 
 const Main = () => {
-    // <const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"])
-    const initializeTimes = () => {
-     state(["13:00"])
+    const initializeTimes =  {
+    state: ["12:00", "13:00"],
     }
 
     const updateTimes = (state, action) => {
-        dispatch({state: ["09:00", "10:00"]})
+        switch(action.type){
+            case 'update': {
+                return({state: ["12:00","13:00","14:00","15:00","16:00","17:00","18:00"]})
+            }
+        }
+        throw Error('Unknown action: ' + action.type);
     }
-    const [state, dispatch] = useReducer(updateTimes, {state: ["09:00"]})
+    const [state, dispatch] = useReducer(updateTimes, initializeTimes)
     return (
     <>
     <main>
@@ -26,8 +30,7 @@ const Main = () => {
             <Route path="/" element={<Homepage />}></Route>
             <Route path="/About" element={<About />}></Route>
             <Route path="/Menu" element={<Menu />}></Route>
-            <Route path="/Bookingpage" element={<BookingPage state={state} dispatch={dispatch} // availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} 
-            />}></Route>
+            <Route path="/Bookingpage" element={<BookingPage state={state} dispatch={dispatch} />}></Route>
             <Route path="/Orderonline" element={<Orderonline />}></Route>
             <Route path="/Login" element={<Login />}></Route>
         </Routes>
