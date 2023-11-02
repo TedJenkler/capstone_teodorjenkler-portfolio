@@ -11,13 +11,13 @@ import { useReducer, useState } from "react"
 
 const Main = () => {
     const initializeTimes =  {
-    state: ["12:00", "13:00"],
+    time: ["12:00", "13:00"],
     }
 
     const updateTimes = (state, action) => {
         switch(action.type){
             case 'update': {
-                return({state: ["12:00","13:00","14:00","15:00","16:00","17:00","18:00"]})
+                return({time: ["12:00","13:00","14:00","15:00","16:00","17:00","18:00"]})
             }
         }
         throw Error('Unknown action: ' + action.type);
