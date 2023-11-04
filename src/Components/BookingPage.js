@@ -7,7 +7,7 @@ const BookingPage = (props) => {
    })
     return (
     <>
-        <BookingForm renderfunction={renderfunction} state={props.state} dispatch={props.dispatch} />
+        <BookingForm state={props.state} dispatch={props.dispatch} />
     </>
     )
 }
