@@ -1,17 +1,27 @@
-import calltoactionimg from "../icons_assets/restauranfood.jpg"
-
+import React from "react";
+import { Link } from "react-router-dom";
+import bannerImg from "../icons_assets/restauranfood.jpg"
 
 const CallToAction = () => {
     return (
-        <div className="calltoaction">
-            <div className="calltoaction-textarea">
-                <h1 className="calltoaction-title">Little Lemon</h1>
-                <h2 className="calltoaction-subtitle">Chicago</h2>
-                <h3 className="calltoaction-text">We are a family owned Mediterranean resturant, focused on traditional recipes served with a mordern twist.</h3>
-                <button className="calltoaction-btn">Reserve a Table</button>
-            </div>
-            <div className="calltoaction-imgarea"><img className="calltoaction-img" src={calltoactionimg} alt="CallToAction" /></div>
-        </div>
+        <header className="header">
+        <section>
+          <div className="banner">
+            <h2>Little Lemon</h2>
+            <h3>Chicago</h3>
+            <p>
+              We are a family owned Mediterraneran restaurant, focused on
+              traditional recipes servred with a modern twist.
+            </p>
+            <Link to="/Bookingpage">
+              <button aria-label="On Click">Reserve Table</button>
+            </Link>
+          </div>
+          <div className="banner-img">
+            <img src={bannerImg} alt="" />
+          </div>
+        </section>
+      </header>
     )
 }
 
