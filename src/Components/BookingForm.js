@@ -1,4 +1,8 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+
+console.log("API is broken lesson skipped")
+
 
 const BookingForm = (props) => {
 
@@ -7,6 +11,7 @@ const BookingForm = (props) => {
    })
     const formhandler = (e) => {
         e.preventDefault();
+        alert("Form submitted courseas API is down")
     }
     const [dateField, setDateField] = useState("");
     const [number, setNumber] = useState("");
@@ -27,7 +32,7 @@ const BookingForm = (props) => {
             <option>Birthday</option>
             <option>Anniversary</option>
         </select>
-        <input type="submit" value="Make Your reservation"></input>
+        <input aria-label="On Click" type="submit" value="Make Your reservation"></input>
     </form>
     </>
     )
